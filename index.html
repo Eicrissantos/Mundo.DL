@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundo Delas</title>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+<h1 onclick="renderProducts(products)">Mundo Delas</h1>
+</div>
+
+<input 
+type="text" 
+id="search" 
+placeholder="Buscar maquiagem..."
+onkeyup="searchProduct()"
+>
+
+<nav class="menu">
+<a onclick="filterCategory('Lingerie')">Lingerie</a>
+<a onclick="filterCategory('Perfumes')">Perfumes</a>
+<a onclick="filterCategory('Sexy Shop')">Sexy Shop</a>
+<a onclick="filterCategory('Kits')">Kits</a>
+</nav>
+
+<div class="cart">
+<a href="pages/cart.html">🛒 Carrinho (<span id="cart-count">0</span>)</a>
+</div>
+
+</header>
+
+<section class="banner">
+
+</section>
+
+<section class="products-section">
+<h2>Produtos</h2>
+<div id="products"></div>
+</section>
+
+<script src="js/products.js"></script>
+<script src="js/cart-manager.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>
