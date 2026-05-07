@@ -52,7 +52,7 @@ function removeItem(index){
 function checkout(){
   const cart = CartManager.getCart()
   if(cart.length === 0){
-    alert("Seu carrinho está vazio")
+    ToastService.error("Seu carrinho está vazio")
     return
   }
 
@@ -83,7 +83,10 @@ function checkout(){
   
   // Redirecionar para WhatsApp
   const urlWhatsApp = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${mensagemCodificada}`
-  window.location.href = urlWhatsApp
+  ToastService.info("Redirecionando para o WhatsApp...")
+  setTimeout(() => {
+    window.location.href = urlWhatsApp
+  }, 500)
 }
 
 // Inicializar quando o DOM estiver pronto
