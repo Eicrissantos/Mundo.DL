@@ -1,8 +1,8 @@
 import { storeConfig } from "../config/store"
-import { OrderPayload } from "../types/order"
+import { OrderPayload, OrderResponse } from "../types/order"
 
 export const orderService = {
-  async create(payload: OrderPayload) {
+  async create(payload: OrderPayload): Promise<OrderResponse> {
     const response = await fetch(`${storeConfig.apiUrl}/orders`, {
       method: "POST",
       headers: {
@@ -14,6 +14,17 @@ export const orderService = {
     if(!response.ok) {
       const error = await response.json().catch(() => null)
       throw new Error(error?.message ?? "Nao foi possivel criar o pedido.")
+    }
+
+    return response.json()
+  },
+
+  async track(identifier: string): Promise<OrderResponse> {
+    const response = await fetch(`${storeConfig.apiUrl}/orders/track/${encodeURIComponent(identifier)}`)
+
+    if(!response.ok) {
+      const error = await response.json().catch(() => null)
+      throw new Error(error?.message ?? "Pedido nao encontrado.")
     }
 
     return response.json()

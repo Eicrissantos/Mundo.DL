@@ -25,5 +25,20 @@ export const whatsappService = {
   redirect(items: CartItem[]) {
     const message = encodeURIComponent(this.buildMessage(items))
     window.location.href = `https://api.whatsapp.com/send?phone=${storeConfig.whatsapp}&text=${message}`
+  },
+
+  productQuestion(productName: string) {
+    const message = encodeURIComponent(`Ola! Tenho uma duvida sobre o produto ${productName}. Poderia me ajudar?`)
+    window.open(`https://api.whatsapp.com/send?phone=${storeConfig.whatsapp}&text=${message}`, "_blank", "noopener")
+  },
+
+  storeContact() {
+    const message = encodeURIComponent("Ola! Gostaria de falar com a Mundo Delas e conhecer melhor a loja.")
+    window.open(`https://api.whatsapp.com/send?phone=${storeConfig.whatsapp}&text=${message}`, "_blank", "noopener")
+  },
+
+  trackOrder(orderId: string | number) {
+    const message = encodeURIComponent(`Ola! Gostaria de consultar o status do meu pedido numero #${orderId}.`)
+    window.open(`https://api.whatsapp.com/send?phone=${storeConfig.whatsapp}&text=${message}`, "_blank", "noopener")
   }
 }
