@@ -1,6 +1,17 @@
+import { Customer } from "./Customer.js"
 import { Order } from "./Order.js"
 import { OrderItem } from "./OrderItem.js"
 import { Product } from "./Product.js"
+
+Customer.hasMany(Order, {
+  foreignKey: "customerId",
+  as: "orders"
+})
+
+Order.belongsTo(Customer, {
+  foreignKey: "customerId",
+  as: "customer"
+})
 
 Order.hasMany(OrderItem, {
   foreignKey: "orderId",
@@ -22,4 +33,4 @@ OrderItem.belongsTo(Product, {
   as: "product"
 })
 
-export { Order, OrderItem, Product }
+export { Customer, Order, OrderItem, Product }

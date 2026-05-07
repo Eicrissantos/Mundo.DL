@@ -1,4 +1,5 @@
 import { Router } from "express"
+import { customerRoutes } from "./customerRoutes.js"
 import { orderRoutes } from "./orderRoutes.js"
 import { productRoutes } from "./productRoutes.js"
 
@@ -10,3 +11,4 @@ routes.get("/health", (_request, response) => {
 
 routes.use("/products", productRoutes)
 routes.use("/orders", orderRoutes)
+routes.use("/customers", customerRoutes)
