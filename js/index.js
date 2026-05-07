@@ -58,7 +58,7 @@ function addToCart(id){
 
   const product = products.find(p => p.id === id)
   if(!product) {
-    alert("Produto não encontrado")
+    ToastService.error("Produto não encontrado")
     console.error('Produto não encontrado:', id)
     return
   }
@@ -66,7 +66,7 @@ function addToCart(id){
   console.log('Produto encontrado:', product.name)
   CartManager.addItem(product, qty)
   updateCart()
-  alert("Produto adicionado ao carrinho!")
+  ToastService.success("Produto adicionado ao carrinho 🛒")
 }
 
 function updateCart(){
