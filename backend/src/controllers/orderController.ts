@@ -11,7 +11,7 @@ export const orderController = {
       response.status(201).json(order)
     } catch (error) {
       response.status(400).json({
-        message: error instanceof Error ? error.message : "Nao foi possivel criar o pedido."
+        message: error instanceof Error ? error.message : "Não foi possível criar o pedido."
       })
     }
   },
@@ -20,7 +20,7 @@ export const orderController = {
     const order = await orderService.findById(Number(request.params.id))
 
     if(!order) {
-      response.status(404).json({ message: "Pedido nao encontrado." })
+      response.status(404).json({ message: "Pedido não encontrado." })
       return
     }
 
@@ -32,7 +32,7 @@ export const orderController = {
     const order = await orderService.track(identifier)
 
     if(!order) {
-      response.status(404).json({ message: "Pedido nao encontrado." })
+      response.status(404).json({ message: "Pedido não encontrado." })
       return
     }
 

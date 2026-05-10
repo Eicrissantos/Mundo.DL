@@ -5,7 +5,7 @@ import { escapeHtml } from "../utils/html"
 const statusLabels: Record<string, string> = {
   pending: "Pendente",
   confirmed: "Confirmado",
-  preparing: "Em preparacao",
+  preparing: "Em preparação",
   shipped: "Enviado",
   delivered: "Entregue",
   canceled: "Cancelado"
@@ -20,14 +20,19 @@ export function TrackPage({ result, query }: TrackPageProps) {
   return `
     <main>
       <section class="page-hero compact-hero">
-        <p class="eyebrow">Rastreamento</p>
-        <h1>Rastrear pedido</h1>
-        <p>Informe o numero ou codigo do pedido para consultar o status atual.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Rastreamento</p>
+          <h1>Rastrear pedido</h1>
+          <p>Informe o número ou código do pedido para consultar o status atual.</p>
+        </div>
+        <figure class="hero-logo hero-logo-small" aria-label="Logo Mundo Delas">
+          <img src="/assets/brand/logo.jpeg" alt="Mundo Delas" />
+        </figure>
       </section>
 
       <section class="tracking-layout">
         <form class="tracking-card" data-track-form>
-          <label>Numero ou codigo do pedido<input name="identifier" value="${escapeHtml(query)}" placeholder="Ex: 12 ou MD-2026-001" required /></label>
+          <label>Número ou código do pedido<input name="identifier" value="${escapeHtml(query)}" placeholder="Ex: 12 ou MD-2026-001" required /></label>
           <button class="primary-button" type="submit">Consultar pedido</button>
           <button class="secondary-button" data-track-whatsapp type="button">Consultar pelo WhatsApp</button>
         </form>
@@ -43,8 +48,8 @@ export function TrackPage({ result, query }: TrackPageProps) {
             <strong>${formatCurrency(Number(result.total))}</strong>
           ` : `
             <p class="eyebrow">Aguardando consulta</p>
-            <h2>O status aparecera aqui.</h2>
-            <p>Use o numero retornado na finalizacao do pedido ou consulte pelo WhatsApp.</p>
+            <h2>O status aparecerá aqui.</h2>
+            <p>Use o número retornado na finalização do pedido ou consulte pelo WhatsApp.</p>
           `}
         </div>
       </section>

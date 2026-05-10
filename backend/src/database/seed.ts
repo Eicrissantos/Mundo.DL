@@ -5,7 +5,7 @@ const placeholder = "https://images.unsplash.com/photo-1607083206968-13611e3d76d
 export const initialProducts = [
   {
     name: "Dolor",
-    description: "Acessorio premium para momentos intensos, com acabamento elegante e envio discreto.",
+    description: "Acessório premium para momentos intensos, com acabamento elegante e envio discreto.",
     price: 129.9,
     image: placeholder,
     category: "Acessorios",
@@ -14,7 +14,7 @@ export const initialProducts = [
   },
   {
     name: "My Vibrador golfinho",
-    description: "Vibrador delicado com design ergonomico, ideal para explorar novas sensacoes com conforto.",
+    description: "Vibrador delicado com design ergonômico, ideal para explorar novas sensações com conforto.",
     price: 189.9,
     image: "/assets/products/my-vibrador-golfinho.jfif",
     category: "Vibradores",
@@ -23,7 +23,7 @@ export const initialProducts = [
   },
   {
     name: "MyCuff Algema",
-    description: "Algema sensual com toque macio, pensada para experiencias seguras e sofisticadas.",
+    description: "Algema sensual com toque macio, pensada para experiências seguras e sofisticadas.",
     price: 79.9,
     image: "/assets/products/mycuff-algema.jfif",
     category: "Acessorios",
@@ -32,7 +32,7 @@ export const initialProducts = [
   },
   {
     name: "Xana loka",
-    description: "Produto divertido para apimentar a rotina com discricao, qualidade e personalidade.",
+    description: "Produto divertido para apimentar a rotina com discrição, qualidade e personalidade.",
     price: 69.9,
     image: "/assets/products/xana-loka.jfif",
     category: "Prazer",
@@ -41,7 +41,7 @@ export const initialProducts = [
   },
   {
     name: "Magical Kiss",
-    description: "Gel beijavel com aroma envolvente e textura suave para momentos mais provocantes.",
+    description: "Gel beijável com aroma envolvente e textura suave para momentos mais provocantes.",
     price: 49.9,
     image: "/assets/products/magical-kiss.jfif",
     category: "Cosmeticos",
@@ -59,7 +59,7 @@ export const initialProducts = [
   },
   {
     name: "VOLUMAO",
-    description: "Cosmetico sensual com proposta marcante, embalagem discreta e experiencia premium.",
+    description: "Cosmético sensual com proposta marcante, embalagem discreta e experiência premium.",
     price: 59.9,
     image: placeholder,
     category: "Cosmeticos",
@@ -68,7 +68,7 @@ export const initialProducts = [
   },
   {
     name: "HOT BALL",
-    description: "Acessorio compacto para intensificar sensacoes com praticidade e acabamento moderno.",
+    description: "Acessório compacto para intensificar sensações com praticidade e acabamento moderno.",
     price: 89.9,
     image: placeholder,
     category: "Acessorios",
@@ -77,7 +77,7 @@ export const initialProducts = [
   },
   {
     name: "Sedenta",
-    description: "Lubrificante premium com toque confortavel para uso intimo e experiencia refinada.",
+    description: "Lubrificante premium com toque confortável para uso íntimo e experiência refinada.",
     price: 44.9,
     image: placeholder,
     category: "Lubrificantes",
@@ -86,7 +86,7 @@ export const initialProducts = [
   },
   {
     name: "Love LUB",
-    description: "Lubrificante versatil para casais, com textura leve e entrega em embalagem discreta.",
+    description: "Lubrificante versátil para casais, com textura leve e entrega em embalagem discreta.",
     price: 39.9,
     image: placeholder,
     category: "Lubrificantes",

@@ -6,6 +6,9 @@ export class Customer extends Model<InferAttributes<Customer>, InferCreationAttr
   declare name: string
   declare email: string
   declare phone: string
+  declare deliveryAddress?: string | null
+  declare location?: string | null
+  declare paymentPreference?: string | null
   declare passwordHash: string
 }
 
@@ -31,6 +34,20 @@ Customer.init(
     phone: {
       type: DataTypes.STRING(30),
       allowNull: false
+    },
+    deliveryAddress: {
+      type: DataTypes.STRING(255),
+      allowNull: true,
+      field: "delivery_address"
+    },
+    location: {
+      type: DataTypes.STRING(160),
+      allowNull: true
+    },
+    paymentPreference: {
+      type: DataTypes.STRING(80),
+      allowNull: true,
+      field: "payment_preference"
     },
     passwordHash: {
       type: DataTypes.STRING(255),

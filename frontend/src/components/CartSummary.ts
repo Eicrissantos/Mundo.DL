@@ -18,7 +18,7 @@ export function CartSummary(items: CartItemType[]) {
         </header>
 
         <div class="cart-items">
-          ${items.length ? items.map(CartItem).join("") : `<p class="empty-state">Seu carrinho esta vazio.</p>`}
+          ${items.length ? items.map(CartItem).join("") : `<p class="empty-state">Seu carrinho está vazio.</p>`}
         </div>
 
         <footer class="cart-footer">

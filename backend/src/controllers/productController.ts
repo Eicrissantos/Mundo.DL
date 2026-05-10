@@ -11,7 +11,7 @@ export const productController = {
     const product = await productService.findById(Number(request.params.id))
 
     if(!product) {
-      response.status(404).json({ message: "Produto nao encontrado." })
+      response.status(404).json({ message: "Produto não encontrado." })
       return
     }
 
@@ -27,7 +27,7 @@ export const productController = {
     const product = await productService.update(Number(request.params.id), request.body)
 
     if(!product) {
-      response.status(404).json({ message: "Produto nao encontrado." })
+      response.status(404).json({ message: "Produto não encontrado." })
       return
     }
 
@@ -38,7 +38,7 @@ export const productController = {
     const removed = await productService.remove(Number(request.params.id))
 
     if(!removed) {
-      response.status(404).json({ message: "Produto nao encontrado." })
+      response.status(404).json({ message: "Produto não encontrado." })
       return
     }
 

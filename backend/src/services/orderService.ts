@@ -26,11 +26,11 @@ function validateItems(items: OrderItemPayload[]) {
 
   items.forEach(item => {
     if(!Number.isInteger(item.productId) || item.productId <= 0) {
-      throw new Error("Produto invalido no pedido.")
+      throw new Error("Produto inválido no pedido.")
     }
 
     if(!Number.isInteger(item.quantity) || item.quantity <= 0) {
-      throw new Error("Quantidade invalida no pedido.")
+      throw new Error("Quantidade inválida no pedido.")
     }
   })
 }
@@ -46,7 +46,7 @@ export const orderService = {
         const customer = await Customer.findByPk(payload.customerId, { transaction })
 
         if(!customer) {
-          throw new Error("Cliente nao encontrado.")
+          throw new Error("Cliente não encontrado.")
         }
       }
 
@@ -57,7 +57,7 @@ export const orderService = {
       })
 
       if(products.length !== productIds.length) {
-        throw new Error("Um ou mais produtos nao foram encontrados.")
+        throw new Error("Um ou mais produtos não foram encontrados.")
       }
 
       let total = 0
@@ -65,7 +65,7 @@ export const orderService = {
         const product = products.find(current => current.id === item.productId)
 
         if(!product) {
-          throw new Error("Produto invalido.")
+          throw new Error("Produto inválido.")
         }
 
         if(product.stock < item.quantity) {
@@ -88,7 +88,7 @@ export const orderService = {
           total,
           status: "pending",
           trackingCode: null,
-          trackingMessage: "Pedido recebido e aguardando confirmacao."
+          trackingMessage: "Pedido recebido e aguardando confirmação."
         },
         { transaction }
       )

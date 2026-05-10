@@ -13,7 +13,7 @@ export const orderService = {
 
     if(!response.ok) {
       const error = await response.json().catch(() => null)
-      throw new Error(error?.message ?? "Nao foi possivel criar o pedido.")
+      throw new Error(error?.message ?? "Não foi possível criar o pedido.")
     }
 
     return response.json()
@@ -24,7 +24,7 @@ export const orderService = {
 
     if(!response.ok) {
       const error = await response.json().catch(() => null)
-      throw new Error(error?.message ?? "Pedido nao encontrado.")
+      throw new Error(error?.message ?? "Pedido não encontrado.")
     }
 
     return response.json()

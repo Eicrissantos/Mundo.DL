@@ -14,7 +14,7 @@ export function Footer() {
       <section>
         <p class="eyebrow">Institucional</p>
         <span>CNPJ em breve</span>
-        <span>Politica de privacidade em breve</span>
+        <span>Política de privacidade em breve</span>
         <span>Termos de uso em breve</span>
       </section>
       <small>© 2026 Mundo Delas. Todos os direitos reservados.</small>

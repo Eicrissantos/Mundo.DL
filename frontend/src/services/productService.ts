@@ -6,7 +6,7 @@ export const productService = {
     const response = await fetch(`${storeConfig.apiUrl}/products`)
 
     if(!response.ok) {
-      throw new Error("Nao foi possivel carregar os produtos.")
+      throw new Error("Não foi possível carregar os produtos.")
     }
 
     const products = await response.json() as Product[]

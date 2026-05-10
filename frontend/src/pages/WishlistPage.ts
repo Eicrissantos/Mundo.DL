@@ -10,16 +10,21 @@ export function WishlistPage({ products }: WishlistPageProps) {
   return `
     <main>
       <section class="page-hero compact-hero">
-        <p class="eyebrow">Favoritos</p>
-        <h1>Lista de desejos</h1>
-        <p>Salve produtos para comparar depois ou adicionar ao carrinho quando quiser.</p>
+        <div class="hero-copy">
+          <p class="eyebrow">Favoritos</p>
+          <h1>Lista de desejos</h1>
+          <p>Salve produtos para comparar depois ou adicionar ao carrinho quando quiser.</p>
+        </div>
+        <figure class="hero-logo hero-logo-small" aria-label="Logo Mundo Delas">
+          <img src="/assets/brand/logo.jpeg" alt="Mundo Delas" />
+        </figure>
       </section>
 
       <section class="products-shell">
         ${products.length === 0 ? `
           <div class="empty-panel">
             <p class="eyebrow">Sem favoritos</p>
-            <h2>Sua lista de desejos esta vazia.</h2>
+            <h2>Sua lista de desejos está vazia.</h2>
             <a class="primary-button" href="#/products">Ver produtos</a>
           </div>
         ` : `

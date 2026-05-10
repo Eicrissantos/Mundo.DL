@@ -12,7 +12,7 @@ export function ProductCard({ product, wished }: ProductCardProps) {
     <article class="product-card">
       <div class="product-image-wrap">
         <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.name)}" loading="lazy" />
-        <span class="stock-badge">${product.stock > 0 ? "Disponivel" : "Sem estoque"}</span>
+        <span class="stock-badge">${product.stock > 0 ? "Disponível" : "Sem estoque"}</span>
         <button class="${wished ? "wishlist-button active" : "wishlist-button"}" data-toggle-wishlist="${product.id}" type="button" aria-label="Adicionar aos desejos">
           ♥
         </button>
@@ -28,8 +28,11 @@ export function ProductCard({ product, wished }: ProductCardProps) {
         <button class="primary-button" data-add-cart="${product.id}" ${product.stock <= 0 ? "disabled" : ""}>
           Adicionar
         </button>
+        <button class="secondary-button product-detail-button" data-view-product="${product.id}" type="button">
+          Ver detalhes
+        </button>
         <button class="whatsapp-product-link" data-product-whatsapp="${product.id}" type="button">
-          Duvida? Chame no WhatsApp
+          Dúvida? Chame no WhatsApp
         </button>
       </div>
     </article>
